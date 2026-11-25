@@ -1,0 +1,36 @@
+
+.post-feed {
+    width: 100%;
+    max-width: 720px;
+    margin: 15px auto;
+}
+
+.post-feed h2 {
+    color: #172b4d;
+    font-size: 23px;
+    font-weight: 750;
+    margin: 25px 0 18px;
+    letter-spacing: -0.5px;
+}
+
+.post-feed > p,
+.post-feed > h3 {
+    text-align: center;
+    color: #64748b;
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #e5eaf1;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .post-feed {
+        margin: 8px auto;
+    }
+
+    .post-feed h2 {
+        font-size: 20px;
+        margin: 20px 10px 15px;
+    }
+}

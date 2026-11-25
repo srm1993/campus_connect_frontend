@@ -1,0 +1,265 @@
+.all-students-page {
+    min-height: 100vh;
+    padding: 32px;
+    background: #f4f7fb;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.students-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.students-header h2 {
+    margin: 0 0 8px;
+    color: #172554;
+    font-size: 28px;
+}
+
+.students-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.student-count {
+    min-width: 150px;
+    padding: 16px 22px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+.student-count span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.student-count h3 {
+    margin: 7px 0 0;
+    color: #2563eb;
+    font-size: 27px;
+}
+
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.student-card {
+    min-width: 0;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+
+.student-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.student-avatar {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.faculty-avatar {
+    background: linear-gradient(135deg, #0891b2, #2563eb);
+}
+
+.student-status {
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.status-active {
+    color: #15803d;
+    background: #dcfce7;
+}
+
+.status-inactive {
+    color: #b91c1c;
+    background: #fee2e2;
+}
+
+.student-info {
+    margin-bottom: 20px;
+}
+
+.student-info h3 {
+    margin: 0 0 6px;
+    color: #1e293b;
+    font-size: 20px;
+    overflow-wrap: anywhere;
+}
+
+.student-number {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.student-details {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    padding: 20px 0;
+    border-top: 1px solid #edf0f5;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+}
+
+.detail-icon {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    border-radius: 9px;
+    color: #2563eb;
+    font-size: 16px;
+}
+
+.detail-item div {
+    min-width: 0;
+}
+
+.detail-item label {
+    display: block;
+    margin-bottom: 5px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.detail-item p {
+    margin: 0;
+    color: #1e293b;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.change-status-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.deactivate-btn {
+    background: #ef4444;
+}
+
+.deactivate-btn:hover {
+    background: #dc2626;
+}
+
+.activate-btn {
+    background: #16a34a;
+}
+
+.activate-btn:hover {
+    background: #15803d;
+}
+
+.empty-students {
+    margin-top: 30px;
+    padding: 55px 20px;
+    text-align: center;
+    background: white;
+    border: 1px dashed #cbd5e1;
+    border-radius: 16px;
+}
+
+.empty-icon {
+    font-size: 40px;
+}
+
+.empty-students h3 {
+    margin-bottom: 8px;
+    color: #1e293b;
+}
+
+.empty-students p {
+    color: #64748b;
+}
+
+/* Tablet: 2 cards per row */
+@media (max-width: 1000px) {
+    .students-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 600px) {
+    .all-students-page {
+        padding: 18px;
+    }
+
+    .students-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .students-header h2 {
+        font-size: 23px;
+    }
+
+    .student-count {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .students-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .student-card {
+        padding: 20px;
+    }
+}

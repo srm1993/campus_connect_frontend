@@ -1,0 +1,372 @@
+.whatsapp-chat-page {
+    padding: 20px;
+    background: #f0f2f5;
+    min-height: 85vh;
+}
+
+.whatsapp-chat-wrapper {
+    display: flex;
+    height: 78vh;
+    min-height: 500px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+/* LEFT SIDEBAR */
+
+.chat-sidebar {
+    width: 340px;
+    min-width: 280px;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background: #263b80;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-header h2 {
+    margin: 0 0 5px;
+    font-size: 21px;
+}
+
+.sidebar-header p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.club-count {
+    background: white;
+    color: #263b80;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.sidebar-search {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-search input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #f5f6f8;
+    outline: none;
+}
+
+.club-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.club-list-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+    transition: 0.2s;
+}
+
+.club-list-item:hover {
+    background: #f5f7fb;
+}
+
+.club-list-item.active-club {
+    background: #e9eefb;
+    border-left: 4px solid #263b80;
+}
+
+.club-avatar {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    background: #263b80;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.club-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.club-info h4 {
+    margin: 0 0 5px;
+    color: #222;
+    font-size: 15px;
+}
+
+.club-info p {
+    margin: 0;
+    color: #888;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* RIGHT CHAT AREA */
+
+.chat-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    background: #efeae2;
+}
+
+.conversation-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 20px;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.conversation-info h3 {
+    margin: 0 0 4px;
+    color: #263b80;
+    font-size: 16px;
+}
+
+.conversation-info p {
+    margin: 0;
+    color: #777;
+    font-size: 12px;
+}
+
+.conversation-body {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MESSAGES */
+
+.message-row {
+    display: flex;
+    margin-bottom: 14px;
+}
+
+.message-row.sent {
+    justify-content: flex-end;
+}
+
+.message-row.received {
+    justify-content: flex-start;
+}
+
+.message-content {
+    max-width: 65%;
+    min-width: 100px;
+    padding: 10px 13px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    overflow-wrap: anywhere;
+}
+
+.message-row.sent .message-content {
+    background: #d9fdd3;
+    border-radius: 10px 10px 0 10px;
+}
+
+.message-row.received .message-content {
+    border-radius: 10px 10px 10px 0;
+}
+
+.message-content h5 {
+    color: #263b80;
+    margin: 0 0 6px;
+    font-size: 12px;
+}
+
+.message-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #222;
+}
+
+.message-content span {
+    display: block;
+    text-align: right;
+    margin-top: 7px;
+    font-size: 10px;
+    color: #888;
+}
+
+/* INPUT AREA */
+
+.message-input-area {
+    display: flex;
+    gap: 12px;
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #ddd;
+}
+
+.message-input-area input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 17px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+}
+
+.message-input-area input:focus {
+    border-color: #263b80;
+}
+
+.message-input-area button {
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: #263b80;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.message-input-area button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* EMPTY STATES */
+
+.welcome-chat,
+.select-club-screen {
+    margin: auto;
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+.welcome-chat h2,
+.select-club-screen h2 {
+    color: #263b80;
+    font-size: 21px;
+}
+
+.welcome-chat p,
+.select-club-screen p {
+    font-size: 14px;
+}
+
+.welcome-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.chat-empty,
+.chat-loading {
+    text-align: center;
+    padding: 35px 15px;
+    color: #777;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .whatsapp-chat-page {
+        padding: 8px;
+    }
+
+    .whatsapp-chat-wrapper {
+        height: 80vh;
+        min-height: 450px;
+    }
+
+    .chat-sidebar {
+        width: 115px;
+        min-width: 115px;
+    }
+
+    .sidebar-header {
+        padding: 12px 7px;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .sidebar-header h2 {
+        font-size: 14px;
+    }
+
+    .sidebar-header p {
+        display: none;
+    }
+
+    .sidebar-search {
+        padding: 7px;
+    }
+
+    .sidebar-search input {
+        font-size: 10px;
+        padding: 7px 3px;
+    }
+
+    .club-list-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
+        padding: 12px 5px;
+    }
+
+    .club-avatar {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        font-size: 16px;
+    }
+
+    .club-info h4 {
+        font-size: 11px;
+        overflow-wrap: anywhere;
+    }
+
+    .club-info p {
+        display: none;
+    }
+
+    .conversation-header {
+        padding: 12px 8px;
+    }
+
+    .conversation-body {
+        padding: 12px 8px;
+    }
+
+    .message-content {
+        max-width: 90%;
+    }
+
+}
